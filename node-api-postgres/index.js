@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 const app = express();
 const port = 3000;
 import db from './queries';
+import request from 'request';
 
 app.use(bodyParser.json());
 app.use(
@@ -12,7 +13,7 @@ app.use(
 );
 
 app.get('/', (request, response) => {
-  response.json({ info: 'Node.js, Express, and Postgres API' });
+  response.json({ info: "Started from nothin' now it's here! Testing. Ok this is kool right?!!" });
 });
 
 app.get('/users', db.getUsers);

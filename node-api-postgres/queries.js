@@ -1,9 +1,10 @@
 const Pool = require('pg').Pool;
+const request = require('request');
 const pool = new Pool({
-  user: 'hidden',
+  user: 'me',
   host: 'localhost',
   database: 'api',
-  password: 'hidden',
+  password: 'password',
   port: 5432
 });
 const getUsers = (request, response) => {
